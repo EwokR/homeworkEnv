@@ -37,4 +37,15 @@ public class HufflepuffStudent extends HogwartsStudent {
     public String toString() {
         return super.toString() + " Hardworking = " + this.hardworking + " Loyal = " + this.loyal + " Honest = " + this.honest;
     }
+    public static void findStrongestWizardOnFacultyHufflepuff(HufflepuffStudent student, HufflepuffStudent student6) {
+        int sum1 =0;
+        int sum2 =0;
+        sum1 = student.getHardworking() + student.getLoyal() +student.getHonest();
+        sum2=student6.getHardworking()+student.getHonest()+student.getHonest();
+        if (sum1 > sum2) {
+            System.out.println(student.getName()+ " " + student.getSurname() + " is stronger than " + student6.getName()+" "+student6.getSurname()+" on Hufflepuff faculty!");
+        } else if (sum1<sum2) {
+            System.out.println(student6.getName()+" "+student6.getSurname()+" is stronger than "+student.getName()+ " " + student.getSurname()+" on Hufflepuff faculty!");
+        }
+    }
 }

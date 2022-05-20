@@ -43,4 +43,15 @@ public class RavenclawStudent extends HogwartsStudent {
     public String toString() {
         return super.toString() + " Smart = " + this.smart + " Wise = " + this.wise + " Witty = " + this.witty + " Creative = " + this.creative;
     }
+    public static void findStrongestWizardOnFacultyRavenclaw(RavenclawStudent student, RavenclawStudent student9) {
+        int sum1 =0;
+        int sum2 =0;
+        sum1=student.getSmart()+student.getWise()+student.getWitty()+student.getCreative();
+        sum2=student9.getSmart()+student9.getWise()+student9.getWitty()+student9.getCreative();
+        if (sum1 > sum2) {
+            System.out.println(student.getName()+ " " + student.getSurname() + " is stronger than " + student9.getName()+" "+student9.getSurname()+" on Ravenclaw faculty!");
+        } else if (sum1<sum2) {
+            System.out.println(student9.getName()+" "+student9.getSurname()+" is stronger than "+student.getName()+ " " + student.getSurname()+" on Ravenclaw faculty!");
+        }
+    }
 }

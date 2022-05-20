@@ -56,4 +56,15 @@ public class SlytherinStudent extends HogwartsStudent {
     public String toString() {
         return super.toString() + " Cunning = " +this.cunning+" Determination = "+this.determination+" Resourcefulness = "+this.resourcefulness+ " Ambitious = "+this.ambitious+" Lust for power = "+this.lustForPower;
     }
+    public static void findStrongestWizardOnFacultySlytherin(SlytherinStudent student, SlytherinStudent student12) {
+        int sum1 =0;
+        int sum2 =0;
+        sum1=student.getCunning()+ student.getDetermination()+student.getAmbitious()+student.getResourcefulness()+student.getLustForPower();
+        sum2=student12.getCunning()+ student12.getDetermination()+student12.getAmbitious()+student12.getResourcefulness()+student12.getLustForPower();
+        if (sum1 > sum2) {
+            System.out.println(student.getName()+ " " + student.getSurname() + " is stronger than " + student12.getName()+" "+student12.getSurname()+" on Slytherin faculty!");
+        } else if (sum1<sum2) {
+            System.out.println(student12.getName()+" "+student12.getSurname()+" is stronger than "+student.getName()+ " " + student.getSurname()+" on Slytherin faculty!");
+        }
+    }
 }

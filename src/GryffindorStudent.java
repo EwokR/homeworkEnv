@@ -38,9 +38,15 @@ public class GryffindorStudent extends HogwartsStudent {
     public String toString() {
         return super.toString() + " Nobility " + this.nobility + " Honor " + this.honor + " Brave " + this.brave;
     }
-    public static int findStrongestWizardOnFacultyGryffindor2 (GryffindorStudent student) {
-        int sum =0;
-        sum = student.getNobility() + student.getHonor() +student.getBrave();
-        return sum;
+    public static void findStrongestWizardOnFacultyGryffindor(GryffindorStudent student, GryffindorStudent student3) {
+        int sum1 =0;
+        int sum2 =0;
+        sum1 = student.getNobility() + student.getHonor() +student.getBrave();
+        sum2 = student3.getNobility() + student3.getHonor() + student3.getBrave();
+        if (sum1 > sum2) {
+            System.out.println(student.getName()+ " " + student.getSurname() + " is stronger than " + student3.getName()+" "+student3.getSurname()+" on Gryffindor faculty!");
+        } else if (sum1<sum2) {
+            System.out.println(student3.getName()+" "+student3.getSurname()+" is stronger than "+student.getName()+ " " + student.getSurname()+" on Gryffindor faculty!");
+        }
     }
 }
