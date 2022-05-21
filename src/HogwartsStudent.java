@@ -1,4 +1,4 @@
-public class HogwartsStudent {
+public abstract class HogwartsStudent {
     private String name;
     private String surname;
     private String faculty;
@@ -45,15 +45,21 @@ public class HogwartsStudent {
     public String toString() {
         return "Name " + getName() + " Surname " + getSurname() + " Faculty " + getFaculty() + " Magic Power = " + getMagicPower() + " Trangretion Distance = " + getTransgretionDistance();
     }
-    public static void findStrongestWizardInHogwarts(HogwartsStudent student, HogwartsStudent student2) {
-        int sum1 =0;
-        int sum2 =0;
-        sum1=student.getMagicPower()+student.getTransgretionDistance();
-        sum2=student2.getMagicPower()+student2.getTransgretionDistance();
-        if (sum1 > sum2) {
-            System.out.println(student.getName()+ " " + student.getSurname() + " is stronger than " + student2.getName()+" "+student2.getSurname()+" in Hogwarts walls!");
-        } else if (sum1<sum2) {
-            System.out.println(student2.getName()+" "+student2.getSurname()+" is stronger than "+student.getName()+ " " + student.getSurname()+" in Hogwarts walls!");
+
+    public int strongestWizard() {
+        return magicPower + transgretionDistance;
+    }
+
+    public void compareHogwarts(HogwartsStudent student) {
+        int strongestWizard1 = strongestWizard();
+        int strongestWizard2 = student.strongestWizard();
+        if (strongestWizard1 > strongestWizard2) {
+            System.out.println(student.getName()+ " " + student.getSurname() + " is stronger than " + student.getName()+" "+student.getSurname()+" in Hogwarts faculty!");
+        } else if (strongestWizard2 > strongestWizard1) {
+            System.out.println(student.getName()+ " " + student.getSurname() + " is stronger than " + student.getName()+" "+student.getSurname()+" in Hogwarts faculty!");
+        } else {
+            System.out.println("Equals");
         }
     }
+
 }

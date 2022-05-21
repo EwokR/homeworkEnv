@@ -5,11 +5,11 @@ public class RavenclawStudent extends HogwartsStudent {
     private int creative;
 
     public RavenclawStudent(String name, String surname, String faculty, int magicPower, int transgretionDistance, int smart, int wise, int witty, int creative) {
-        super(name, surname, faculty,magicPower, transgretionDistance);
-        this.smart=smart;
-        this.wise=wise;
-        this.witty=witty;
-        this.creative=creative;
+        super(name, surname, faculty, magicPower, transgretionDistance);
+        this.smart = smart;
+        this.wise = wise;
+        this.witty = witty;
+        this.creative = creative;
     }
 
     public int getSmart() {
@@ -39,19 +39,25 @@ public class RavenclawStudent extends HogwartsStudent {
     public void setWitty(int witty) {
         this.witty = witty;
     }
+
     @Override
     public String toString() {
         return super.toString() + " Smart = " + this.smart + " Wise = " + this.wise + " Witty = " + this.witty + " Creative = " + this.creative;
     }
-    public static void findStrongestWizardOnFacultyRavenclaw(RavenclawStudent student, RavenclawStudent student9) {
-        int sum1 =0;
-        int sum2 =0;
-        sum1=student.getSmart()+student.getWise()+student.getWitty()+student.getCreative();
-        sum2=student9.getSmart()+student9.getWise()+student9.getWitty()+student9.getCreative();
-        if (sum1 > sum2) {
-            System.out.println(student.getName()+ " " + student.getSurname() + " is stronger than " + student9.getName()+" "+student9.getSurname()+" on Ravenclaw faculty!");
-        } else if (sum1<sum2) {
-            System.out.println(student9.getName()+" "+student9.getSurname()+" is stronger than "+student.getName()+ " " + student.getSurname()+" on Ravenclaw faculty!");
+
+    @Override
+    public int strongestWizard() {
+        return smart + wise + witty + creative;
+    }
+    public void compareRavenclaw(RavenclawStudent student) {
+        int strongestWizard1 = strongestWizard();
+        int strongestWizard2 = student.strongestWizard();
+        if (strongestWizard1 > strongestWizard2) {
+            System.out.println(student.getName()+ " " + student.getSurname() + " is stronger than " + student.getName()+" "+student.getSurname()+" on RavenclawStudent faculty!");
+        } else if (strongestWizard2 > strongestWizard1) {
+            System.out.println(student.getName()+ " " + student.getSurname() + " is stronger than " + student.getName()+" "+student.getSurname()+" on RavenclawStudent faculty!");
+        } else {
+            System.out.println("Equals");
         }
     }
 }

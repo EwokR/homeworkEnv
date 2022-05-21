@@ -15,10 +15,10 @@ public class Main {
         SlytherinStudent student11=new SlytherinStudent("Graham","Montague","Slytherin",17,12,40,12,8,10,39);
         SlytherinStudent student12=new SlytherinStudent("Gregory","Goyle","Slytherin",25,25,25,25,25,25,25);
         System.out.println(student3);
-        GryffindorStudent.findStrongestWizardOnFacultyGryffindor(student1,student3);
-        HufflepuffStudent.findStrongestWizardOnFacultyHufflepuff(student4,student6);
-        RavenclawStudent.findStrongestWizardOnFacultyRavenclaw(student7,student9);
-        SlytherinStudent.findStrongestWizardOnFacultySlytherin(student10,student12);
-        HogwartsStudent.findStrongestWizardInHogwarts(student5,student2);
+        student1.compareGryffindor(student3);
+        student4.compareHufflepuff(student5);
+        student8.compareRavenclaw(student9);
+        student10.compareSlytherin(student12);
+        student2.compareHogwarts(student6);
     }
 }
