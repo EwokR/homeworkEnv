@@ -48,9 +48,9 @@ public class GryffindorStudent extends HogwartsStudent {
         int strongestWizard1 = strongestWizard();
         int strongestWizard2 = student.strongestWizard();
         if (strongestWizard1 > strongestWizard2) {
-            System.out.println(student.getName() + " " + student.getSurname() + " is stronger than " + "John CENA" + " " + student.getSurname() + " on Gryffindor faculty!");
+            System.out.println(getName() + " " + getSurname() + " is stronger than " +  student.getName() + " " + student.getSurname() + " on Gryffindor faculty!");
         } else if (strongestWizard2 > strongestWizard1) {
-            System.out.println(student.getName() + " " + student.getSurname() + " is stronger than " + "John CENA" + " " + student.getSurname() + " on Gryffindor faculty!");
+            System.out.println(student.getName() + " " + student.getSurname() + " is stronger than " +  getName() + " " + getSurname() + " on Gryffindor faculty!");
         } else {
             System.out.println("Equals");
         }

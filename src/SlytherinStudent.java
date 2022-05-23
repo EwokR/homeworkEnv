@@ -67,9 +67,9 @@ public class SlytherinStudent extends HogwartsStudent {
         int strongestWizard1 = strongestWizard();
         int strongestWizard2 = student.strongestWizard();
         if (strongestWizard1 > strongestWizard2) {
-            System.out.println(student.getName()+ " " + student.getSurname() + " is stronger than " + student.getName()+" "+student.getSurname()+" on Slytherin faculty!");
+            System.out.println(getName()+ " " + getSurname() + " is stronger than " + student.getName()+" "+student.getSurname()+" on Slytherin faculty!");
         } else if (strongestWizard2 > strongestWizard1) {
-            System.out.println(student.getName()+ " " + student.getSurname() + " is stronger than " + student.getName()+" "+student.getSurname()+" on Slytherin faculty!");
+            System.out.println(student.getName()+ " " + student.getSurname() + " is stronger than " + getName()+" "+getSurname()+" on Slytherin faculty!");
         } else {
             System.out.println("Equals");
         }
